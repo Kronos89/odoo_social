@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+
+         <record id="res_partner_view_socials" model="ir.ui.view">
+            <field name="name">res.partner.view.socials</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <page name="internal_notes" position="after">
+                    <page name="facebook" string="Facebook">
+                        <group>
+                             <field name="facebook"/>
+                        </group>
+                    </page>
+                </page>
+                <page name="internal_notes" position="after">
+                    <page name="twitter" string="Twitter">
+                        <group>
+                             <field name="twitter"/>
+                        </group>
+                    </page>
+                </page>
+                <page name="internal_notes" position="after">
+                    <page name="linkedin" string="Linkedin">
+                        <group>
+                             <field name="linkedin"/>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+    </data>
+</odoo>

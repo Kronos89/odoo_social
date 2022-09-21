@@ -21,6 +21,12 @@
     # Any module necessary for this one to work correctly
     'depends': ['crm', 'website'],
     
+    # Always loaded
+    'data': [
+        'views/res_partner_view.xml',
+        'views/template.xml',
+    ],
+
     # Assets required
     'assets': {
         'web.assets_backend': [
