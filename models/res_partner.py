@@ -10,3 +10,11 @@ class Partner(models.Model):
     twitter = fields.Char('Twitter')
     facebook = fields.Char('Facebook')
     linkedin = fields.Char('Linkedin')
+    complete_profile = fields.Boolean(compute='_compute_complete_profile', string="Complete profile", store=True)
+    
+    @api.depends('twitter','facebook','linkedin')
+    def _compute_complete_profile(self):
+        if twitter == "" and facebook == "" and linkedin == "":
+            self.complete_profile = True
+        else:
+            self.complete_profile = False
