@@ -25,16 +25,8 @@
     'data': [
         'views/res_partner_view.xml',
         'views/template.xml',
+        'views/profile.xml',
     ],
-
-    # Assets required
-    'assets': {
-        'web.assets_backend': [
-            'odoo_social/static/src/img/facebook.png',
-            'odoo_social/static/src/img/twitter.png',
-            'odoo_social/static/src/img/linkedin.png',
-        ],
-    },
     
     'application': False,
     'installable': True,

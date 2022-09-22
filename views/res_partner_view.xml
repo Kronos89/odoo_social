@@ -7,21 +7,21 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <page name="internal_notes" position="after">
-                    <page name="facebook" string="Facebook">
+                    <page name="facebook" string="Facebook" class="fa fa-facebook">
                         <group>
-                             <field name="facebook"/>
+                            <field name="facebook"/>
                         </group>
                     </page>
                 </page>
                 <page name="internal_notes" position="after">
-                    <page name="twitter" string="Twitter">
+                    <page name="twitter" string="Twitter" class="fa fa-twitter">
                         <group>
                              <field name="twitter"/>
                         </group>
                     </page>
                 </page>
                 <page name="internal_notes" position="after">
-                    <page name="linkedin" string="Linkedin">
+                    <page name="linkedin" string="Linkedin" class="fa fa-linkedin">
                         <group>
                              <field name="linkedin"/>
                         </group>

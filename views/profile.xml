@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <record id="view_incomplete_profile" model="ir.ui.view">
+            <field name="name">contacts.incomplete.profile</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='inactive']" position="before">
+                    <filter string="Profile incomplete" name="incomplete_profile" domain="[('complete_profile', '=', False)]"/>
+                    <separator/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
