@@ -28,7 +28,7 @@
         'views/profile.xml',
     ],
     
-    'application': False,
+    'application': True,
     'installable': True,
     'auto_install': False,
 }

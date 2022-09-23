@@ -31,6 +31,7 @@ class Partner(models.Model):
                 #Change the image of contact to complete
                 image = modules.get_module_resource('odoo_social', 'static/src/img', 'complete.png')
                 self.image_1920 = base64.b64encode(open(image, 'rb').read())
+                
             #If some of the social media are empty or at least one is change    
             else:
                 #Change to false the profile (Is incomplete)

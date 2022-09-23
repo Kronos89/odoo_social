@@ -20,6 +20,8 @@
 		</xpath>
         	<t t-call="website.layout">
 				<div id="wrap" class="oe_structure oe_empty">
+
+                    <!-- Section to show Contacts -->
 					<section class="s_title parallax s_parallax_is_fixed bg-black-50 pt24 pb24" data-vcss="001" data-snippet="s_title" data-scroll-background-ratio="1">
 						<span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_banner_default_image'); background-position: 50% 0;"/>
 						
@@ -29,7 +31,8 @@
 							<h1>Customers</h1>
 						</div>
 					</section>
-
+                    
+                    <!-- Section to show all Contacts in datatable -->
                     <section class="s_text_block pt40 pb40 o_colored_level " data-snippet="s_text_block" style="display: flex; justify-content: center;">
                         <div id="wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer" style="width: 90%; ">
                             <table id="datatable" class="display nowrap">
@@ -49,6 +52,7 @@
                                 </thead>
                                 
                                 <tbody>
+                                    <!-- all contacts from controllers/main.py -->
                                     <t t-foreach="customers or []" t-as="customers">
                                         <tr>
                                             <td></td>

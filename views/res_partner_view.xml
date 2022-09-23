@@ -1,11 +1,15 @@
 <odoo>
     <data>
-
-         <record id="res_partner_view_socials" model="ir.ui.view">
+        <!-- Creation of view to include the Social media url in differents tab in Contacts -->
+        <record id="res_partner_view_socials" model="ir.ui.view">
             <field name="name">res.partner.view.socials</field>
             <field name="model">res.partner</field>
+
+             <!-- from where inherit to add Tabs -->
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
+
+                <!-- put the Tab of each social media after internal notes  -->
                 <page name="internal_notes" position="after">
                     <page name="facebook" string="Facebook" class="fa fa-facebook">
                         <group>
@@ -27,6 +31,7 @@
                         </group>
                     </page>
                 </page>
+                <!-- end of Tab creation  -->
             </field>
         </record>
 

@@ -1,11 +1,20 @@
 <odoo>
     <data>
+        <!-- Creation of view to include the Profile incomplete filter in contacts -->
         <record id="view_incomplete_profile" model="ir.ui.view">
+
+            <!-- name of the filter and model -->
             <field name="name">contacts.incomplete.profile</field>
             <field name="model">res.partner</field>
+
+            <!-- from where inherit to add filter -->
             <field name="inherit_id" ref="base.view_res_partner_filter"/>
             <field name="arch" type="xml">
+
+                <!-- put before the filter[@name='inactive'] and add a separator later -->
                 <xpath expr="//filter[@name='inactive']" position="before">
+
+                    <!-- they find all the profiles incomplete where field complete_profile is False -->
                     <filter string="Profile incomplete" name="incomplete_profile" domain="[('complete_profile', '=', False)]"/>
                     <separator/>
                 </xpath>
